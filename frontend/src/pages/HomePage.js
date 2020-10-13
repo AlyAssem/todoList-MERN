@@ -32,7 +32,7 @@ const HomePage = () => {
     <>
       {loading ? (
         <Loader />
-      ) : loggedIn.userInfo === null ? (
+      ) : !loggedIn.userInfo ? (
         <Message variant='danger'>Please logIn</Message>
       ) : error ? (
         <Message variant='danger'>{error}</Message>
